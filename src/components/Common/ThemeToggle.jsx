@@ -1,0 +1,19 @@
+// src/components/Common/ThemeToggle.jsx
+import React from 'react';
+import { IconButton, Tooltip } from '@mui/material';
+import { Brightness4 as DarkIcon, Brightness7 as LightIcon } from '@mui/icons-material';
+import { useThemeContext } from '../../context/ThemeContext';
+
+const ThemeToggle = () => {
+    const { isDarkMode, toggleTheme } = useThemeContext();
+
+    return (
+        <Tooltip title={isDarkMode ? 'Switch to light mode' : 'Switch to dark mode'}>
+            <IconButton onClick={toggleTheme} color="inherit">
+                {isDarkMode ? <LightIcon /> : <DarkIcon />}
+            </IconButton>
+        </Tooltip>
+    );
+};
+
+export default ThemeToggle;

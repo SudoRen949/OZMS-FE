@@ -1,0 +1,5 @@
+name: organizerving
+app_id: da_K1EIZtMUxp36
+owner: renatojr
+package: .
+kind: wasmer.io/App.v0
